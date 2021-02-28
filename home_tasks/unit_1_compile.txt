@@ -1,0 +1,8 @@
+1. create a simple projects when included 3 modules:
+
+    1.1: compile from terminal
+    1.2: ant projects
+    1.3: maven projects
+
+2. all projects must be included min 3 classes and min 2 any libs
+3. best practises: I want see one script file (sh/bat) that launches all projects
