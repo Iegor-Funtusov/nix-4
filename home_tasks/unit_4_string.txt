@@ -12,7 +12,7 @@
 public static String reverse(String src);
 
 -> hello world
-<- dlrow olleh
+<- olleh dlrow
 
 public static String reverse(String src, String dest);
 
