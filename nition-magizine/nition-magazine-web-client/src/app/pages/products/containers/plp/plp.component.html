@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3 d-flex" *ngFor="let product of pageData.items">
+      <app-plp-entry [product]="product" class="w-100 d-flex justify-content-center justify-content-sm-start">
+      </app-plp-entry>
+    </div>
+  </div>
+
+<!--  <div class="load-btn-container" *ngIf="showMoreBtn$ | async">-->
+<!--    <button class="btn-black" (click)="loadMore()">-->
+<!--      load {{ availableAmountOfProductsToAdd$ | async }} more results-->
+<!--    </button>-->
+<!--  </div>-->
+</div>

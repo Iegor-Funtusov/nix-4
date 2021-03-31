@@ -1,0 +1,24 @@
+<div class="card"   *ngIf="{
+    data: productData | async
+  } as product">
+  <div class="card-header">
+    <h4 class="font-weight-bold">{{ product.data.name }}</h4>
+  </div>
+  <div class="card-body">
+    <p class="price regular" *ngIf="product?.data.price">
+      {{ product?.data.price }}
+    </p>
+    <div class="card-text">
+      {{ product?.data.description }}
+    </div>
+    <div class="card-text">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-3" *ngFor="let image of product.data.images">
+          <div class="m-2">
+            <img *ngIf="product" [src]="image.link" [alt]="image.id">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

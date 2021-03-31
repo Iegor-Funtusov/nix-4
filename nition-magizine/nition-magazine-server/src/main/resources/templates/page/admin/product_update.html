@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="utf-8">
+    <title>Update Product</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h4>Update Product</h4>
+                </div>
+                <div class="card-body">
+                    <form action="#" th:action="@{/admin/products/update}" th:object="${product}" method="post">
+                        <input type="hidden" th:field="*{id}" />
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter title" th:field="*{name}">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea rows="6" class="form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter title" th:field="*{description}" />
+                        </div>
+                        <table class="table" th:if="not ${product.getImages().isEmpty()}" id="productInfoTable">
+                            <tbody>
+                            <tr th:each="image, itemStat : *{images}">
+                                <td>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i th:if="${image.home}" class="imageHome fa fa-eye" aria-hidden="true" style="color: green" th:id="'imageHome-' + ${itemStat.index}"></i>
+                                                <i th:unless="${image.home}" class="imageHome fa fa-eye-slash" aria-hidden="true" style="color: green" th:id="'imageHome-' + ${itemStat.index}"></i>
+                                            </span>
+                                            <div class="input-group-text">
+                                                <input type="checkbox" aria-label="Radio button for following text input" th:field="*{images[__${itemStat.index}__].home}" th:value="${image.home}" th:checked="${image.home}" th:id="'image-' + ${itemStat.index}">
+                                            </div>
+                                        </div>
+                                        <input type="text" class="form-control" aria-label="Text input with radio button" th:field="*{images[__${itemStat.index}__].link}">
+                                    </div>
+                                </td>
+                                <td>
+                                    <img border="0" alt="product image" th:src="${image.getLink()}" width="45" height="45" class="ml-2">
+                                </td>
+                                <td>
+                                    <a class="btn" th:onclick="|openDeleteImageModal(${product.getId()}, ${image.getId()})|">
+                                        <i class="fa fa-trash-o" aria-hidden="true" style="color: red"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td>
+                                    <a class="btn" th:onclick="|addNewImage(${product.getId()})|">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteImage" role="dialog" th:fragment="deleteImage">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteImageLabel">Delete image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete the image?
+                    <span th:text="${productId}"></span>
+                    <span th:text="${productImageId}"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a th:href="@{'/admin/products/' + ${productId} + '/delete/image/' + ${productImageId}}" type="button" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<th:block layout:fragment="scripts">
+    <script type="text/javascript" th:src="@{/js/product.js}"></script>
+</th:block>
+
+</body>
+</html>

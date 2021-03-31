@@ -1,0 +1,230 @@
+@import "~bootstrap/scss/mixins";
+@import "src/app/styles/styles";
+
+.product-list-item_img-holder {
+  padding: 36px 33px 20px;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+
+  @include media-breakpoint-down(xs) {
+    width: 33.75%;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-top-right-radius: 0;
+  }
+
+  a {
+    img {
+      transition: .15s transform;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.card {
+  box-shadow: 2px 2px 4px 0 rgba(167, 167, 167, 0.6);
+  margin-bottom: 10px;
+  width: 320px !important;
+  height: 184px;
+  margin-right: -8px;
+  margin-left: -8px;
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    width: 200px;
+    height: 400px;
+  }
+}
+
+.card-title {
+  font-weight: 400;
+  color: #404041;
+  font-size: 14px;
+  float: left;
+  max-height: 100%;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.card-body,
+.card-footer {
+  padding: 8px 9px;
+
+  @include media-breakpoint-up(sm) {
+    padding: 8px 11px;
+  }
+}
+
+.card-body {
+  height: 68px;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+
+.custom-badge {
+  background-color: $primary;
+  color: $white;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  line-height: 17px;
+  padding: 0 6px 0 8px;
+  border-bottom-right-radius: 8px;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: italic;
+  z-index: 1;
+
+  @include media-breakpoint-up(sm) {
+    border-top-left-radius: 8px;
+    font-size: inherit;
+    padding: 0 8px 0 12px;
+    line-height: 22px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-width: 11px 4px 0 0;
+    border-style: solid;
+    border-color: $primary transparent transparent transparent;
+
+    @include media-breakpoint-up(sm) {
+      border-width: 17px 4px 0 0;
+    }
+  }
+}
+
+.like-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: auto;
+  min-width: auto;
+  // TODO: remove after functional implemented
+  pointer-events: none;
+}
+
+.add-to-cart-button {
+  font-size: 14px;
+  padding: 11px 15px;
+  height: 42px;
+}
+
+.add-to-favorite-button {
+  border: 2px solid #2a2a2a;
+  color: #2a2a2a;
+  background-color: #fff;
+  height: 42px;
+  min-width: 42px;
+  padding: 6px 4px 6px 9px;
+  font-size: 24px;
+  margin-left: 11px;
+  // TODO: remove after functional implemented
+  pointer-events: none;
+
+  &:hover {
+    border-color: darken($primary, 15%);
+    color: darken($primary, 15%);
+  }
+}
+
+.promo {
+  background-color: transparent;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0;
+  color: inherit;
+  font-size: 10px;
+  letter-spacing: .28px;
+  line-height: 1.1;
+}
+
+.points {
+  font-weight: 700;
+  font-family: Neutra2Display, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.price-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+
+  @include media-breakpoint-up(sm) {
+    position: relative;
+    padding-top: 13px;
+    line-height: 1.45;
+  }
+}
+
+.old-price {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Neutra2Display, sans-serif;
+  color: #585858;
+
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    transform: translateY(-55%);
+    left: 0;
+  }
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Neutra2Display, sans-serif;
+  color: #2a2a2a;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 30px;
+  }
+}
+
+.cents {
+  font-size: 16px;
+
+  @include media-breakpoint-down(xs) {
+    top: -.3em;
+  }
+}
+
+.unit {
+  font-size: 12px;
+  font-family: Neutra2, sans-serif;
+  font-weight: 400;
+  bottom: 0.1em;
+  color: #585858;
+}
+
+.btn-light.disabled,
+.btn-light:disabled {
+  color: #2a2a2a;
+  background-color: #d4d4d4;
+  border-color: #d4d4d4;
+  opacity: 1
+}
+
+.card-xs-right {
+  @include media-breakpoint-down(xs) {
+    width: 66.25%;
+  }
+}

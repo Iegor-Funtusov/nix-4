@@ -1,0 +1,18 @@
+<div class="card product-list-item flex-row flex-sm-column">
+  <div class="product-list-item_img-holder text-center">
+    <a class="btn" (click)="navigateToDetails()">
+      <img *ngIf="product" [src]="product.images[0].link" [alt]="product.name">
+    </a>
+  </div>
+  <div class="d-flex flex-column flex-grow-1 card-xs-right">
+    <div class="card-body flex-grow-1">
+      <h5 class="card-title mb-0" ellipsis>{{ product.name }}</h5>
+    </div>
+    <div class="price-wrap">
+      <strong class="price" [class.text-primary]="product.price">{{ currencySymbol + roundPrice }}<sup
+        class="cents">{{( centsPrice || '00') + ' '}}</sup></strong>
+<!--      <del class="old-price" *ngIf="oldPrice">{{currencySymbol + oldPrice}}</del>-->
+<!--      <sub class="unit"> / {{unit}}</sub>-->
+    </div>
+  </div>
+</div>
