@@ -1,0 +1,29 @@
+﻿Реализуйте кдасс OrderedList как имплементацию List
+
+Ваш класс должен реализовывать структуру упорядоченного динамического массива
+
+Warning! Использование встроенных возможностей библиотеки Collection запрещено, как и прочих сторонних библиотек
+
+Примеры:
+
+List<Integer> list = new OrderedList();
+list.add(7);
+list.add(0);
+list.add(-7);
+list.add(-7);
+list.add(-17);
+
+out: -17 -7 -7 0 7
+
+List<User> list = new OrderedList();
+list.add(new User(“aaa”));
+list.add(new User(“eee”));
+list.add(new User(“qqq”));
+list.add(new User(“www”));
+
+out: 
+
+user: { “name” : “aaa” }
+user: { “name” : “eee” }
+user: { “name” : “qqq” }
+user: { “name” : “www” }
