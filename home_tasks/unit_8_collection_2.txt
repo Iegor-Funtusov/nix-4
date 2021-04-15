@@ -1,0 +1,39 @@
+Реализация generic set
+
+Реализовать класс MathSet<Number>
+
+класс должен иметь следующие конструкторы:
+
+MathSet()
+MathSet(int capacity)
+MathSet(Number[] numbers)
+MathSet(Number[] ... numbers)
+MathSet(MathSet numbers)
+MathSet(MathSet ... numbers)
+
+класс должен иметь следующие методы:
+
+void add(Number n)
+void add(Number ... n)
+void join(MathSet ms)
+void join(MathSet … ms)
+void sortDesc()
+void sortDesc(int firstIndex, int lastIndex)
+void sortDesc(Number value)
+void sortAsc()
+void sortAsc(int firstIndex, int lastIndex)
+void sortAsc(Number value)
+Number get(int index)
+Number getMax()
+Number getMin()
+Number getAverage()
+Number getMedian()
+Number[] toArray();
+Number[] toArray(int firstIndex, int lastIndex);
+MathSet squash(int firstIndex, int lastIndex)
+void clear()
+void clear(Number[] numbers)
+
+Warning!
+Использование классов и методов Collection и его наследников, Arrays и Stream
+запрещено!
