@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="utf-8">
+    <title>Product Details</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-2 mt-2">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-11">Product Details</div>
+                        <div class="col-1">
+                            <a class="btn" th:href="@{'/admin/products/update/' + ${product.getData().getId()}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>id</th>
+                                    <td th:text="${product.getData().getId()}"></td>
+                                </tr>
+                                <tr>
+                                    <th>created</th>
+                                    <td th:text="${#calendars.format(product.getData().getCreated(),'dd MMMM yyyy')}"></td>
+                                </tr>
+                                <tr>
+                                    <th>updated</th>
+                                    <td th:text="${#calendars.format(product.getData().getUpdated(),'dd MMMM yyyy')}"></td>
+                                </tr>
+                                <tr>
+                                    <th>name</th>
+                                    <td th:text="${product.getData().getName()}"></td>
+                                </tr>
+                                <tr>
+                                    <th>description</th>
+                                    <td th:text="${product.getData().getDescription()}"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-12" th:if="not ${product.getData().getImages().isEmpty()}">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-3" th:each="image : ${product.getData().getImages()}">
+                                    <div class="m-2">
+                                        <img border="0" alt="product image" th:src="${image.getLink()}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

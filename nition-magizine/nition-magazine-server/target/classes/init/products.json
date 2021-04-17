@@ -1,0 +1,52 @@
+[
+  {
+    "product": {
+      "name": "Acer Aspire 5 A515-55G (NX.HZFEU.009) Pure Silver",
+      "description": "Экран 15.6 IPS (1920x1080) Full HD, матовый / Intel Core i5-1035G1 (1.0 - 3.6 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce MX350, 2 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.8 кг / серебристый",
+      "price": "50000",
+      "uniqueKey": "82e653a6-ff35-49c2-9a5c-eda5a752aedc"
+    },
+    "links": [
+      {
+        "link": "https://content2.rozetka.com.ua/goods/images/preview/87589181.jpg",
+        "home": true
+      },
+      {
+        "link": "https://content1.rozetka.com.ua/goods/images/preview/87589187.jpg",
+        "home": false
+      },
+      {
+        "link": "https://content.rozetka.com.ua/goods/images/preview/87589197.jpg",
+        "home": false
+      },
+      {
+        "link": "https://content2.rozetka.com.ua/goods/images/preview/87588243.jpg",
+        "home": false
+      },
+      {
+        "link": "https://content2.rozetka.com.ua/goods/images/preview/87588243.jpg",
+        "home": false
+      },
+      {
+        "link": "https://content1.rozetka.com.ua/goods/images/preview/87588259.jpg",
+        "home": false
+      },
+      {
+        "link": "https://content1.rozetka.com.ua/goods/images/preview/87588261.jpg",
+        "home": false
+      },
+      {
+        "link": "https://content1.rozetka.com.ua/goods/images/preview/87587801.jpg",
+        "home": false
+      },
+      {
+        "link": "https://content1.rozetka.com.ua/goods/images/preview/87587807.jpg",
+        "home": false
+      },
+      {
+        "link": "https://content1.rozetka.com.ua/goods/images/preview/87587813.jpg",
+        "home": false
+      }
+    ]
+  }
+]

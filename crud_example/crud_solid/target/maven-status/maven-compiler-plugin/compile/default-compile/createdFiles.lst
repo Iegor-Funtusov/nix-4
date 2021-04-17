@@ -1,0 +1,15 @@
+ua/com/alevel/dao/AuthTokenService.class
+ua/com/alevel/db/DBInMemory.class
+ua/com/alevel/entity/BaseEntity.class
+ua/com/alevel/dao/LoginService.class
+ua/com/alevel/util/SecurityUtil.class
+ua/com/alevel/dao/impl/LoginServiceImpl.class
+ua/com/alevel/dao/UserService.class
+ua/com/alevel/entity/Role.class
+ua/com/alevel/entity/Admin.class
+ua/com/alevel/entity/Personal.class
+ua/com/alevel/dao/impl/AuthTokenServiceImpl.class
+ua/com/alevel/entity/User.class
+ua/com/alevel/dao/impl/PersonalService.class
+ua/com/alevel/SolidMain.class
+ua/com/alevel/entity/AuthToken.class

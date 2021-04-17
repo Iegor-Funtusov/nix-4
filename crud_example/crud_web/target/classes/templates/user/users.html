@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="utf-8">
+    <title>My Post</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-2 mt-2">
+                <div class="card-header">
+                    Users
+                </div>
+                <div class="card-body">
+                    <table class="table table-sm table-hover">
+                        <thead>
+                        <tr>
+                            <th>first name</th>
+                            <th>last name</th>
+                            <th>created</th>
+                            <th>details</th>
+                            <th>remove</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="user,iter : ${users}">
+                            <td th:text="${user.getFirstName()}"></td>
+                            <td th:text="${user.getLastName()}"></td>
+                            <td th:text="${#calendars.format(user.getCrated(),'dd MMMM yyyy')}"></td>
+                            <td>
+                                <a class="btn" th:href="@{'/users/' + ${user.getId()}}"><i class="fa fa-info" aria-hidden="true"></i></a>
+                            </td>
+                            <td>
+                                <a class="btn" th:href="@{'/users/' + ${user.getId()} + '/delete'}"><i class="fa fa-archive" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card mt-2">
+                <div class="card-header">
+                    <a type="button" class="btn btn-primary" th:href="@{/users/new}">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

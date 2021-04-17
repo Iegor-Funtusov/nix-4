@@ -1,0 +1,15 @@
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/db/DBInMemory.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/dao/UserService.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/dao/impl/PersonalService.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/entity/User.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/entity/Role.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/entity/Admin.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/util/SecurityUtil.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/entity/BaseEntity.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/entity/Personal.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/SolidMain.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/entity/AuthToken.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/dao/impl/LoginServiceImpl.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/dao/impl/AuthTokenServiceImpl.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/dao/LoginService.java
+/home/funtushan/a_level/projects/nix4/crud_example/crud_solid/src/main/java/ua/com/alevel/dao/AuthTokenService.java
