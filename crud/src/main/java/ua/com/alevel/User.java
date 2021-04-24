@@ -39,7 +39,6 @@ public class User {
     }
 
     public String getEmail() {
-        System.currentTimeMillis()
         return email;
     }
 
